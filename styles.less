@@ -12,7 +12,7 @@ body{
     width: 100%;
     text-align: center;
 	margin: 0;
-	padding: 0;
+    padding: 0;
 }
 
 
@@ -24,8 +24,19 @@ Variables
 /* Defined Colours
 *****************************************************/
 
-@nav-bar-bc: #7b7b7b96;
+/* Nav bar colours */
+@nav-bar: #E0E0E0;
+@nav-bar-contrast: #000000;//Contrast version of nav bar background colour
+@nav-button: #7b7b7b96;
+@nav-button-contrast: #252525;//Contrast version of nav button background colour
 @nav-text-colour: #000000;
+@nav-text-contrast-colour: #FFFFFF;//Contrast version of nav bar text colour
+
+/* Banner colours */
+@banner: #FFFFFF;
+@banner-text-colour: #000000;
+@banner-contrast: rgba(0, 0, 0, 0.534);
+@banner-text-contrast-colour: #FFFFFF;
 
 /* Defined Fonts
 *****************************************************/
@@ -35,8 +46,19 @@ Variables
     color: @nav-text-colour;
     text-decoration: none;
     float: left;
-    margin: 11px 3%;
+    margin: 23px 3%;
     font-size: 1em;
+}
+
+.sub-heading{
+    font-family: 'Signika', sans-serif;
+    height: 10vh;
+    margin: 0;
+    font-size: 8vh;
+}
+
+.body-text{
+    font-family: 'Fira Sans', sans-serif;
 }
 
 /****************************************************
@@ -45,16 +67,23 @@ Header
 
 header{
     width: 100%;
-    height: 50px;
+    height: 8vh;
+    background-color: @nav-bar;
 
     #nav-button{
         border-radius: 20px;
-        padding: 6px 8px;
-        margin: 8px 1%;
+        padding: 1.3vh 1.5vh;
+        margin: 1vh;
         float: right;
-        background-color: @nav-bar-bc;
+        background-color: @nav-button;
         border-style: none;
         outline: none;
+        position: fixed;
+        right: 0;
+
+        .fa{//Hamburger nav bar icon
+            font-size: 2vh;
+        }
 
         &:hover{
             cursor: pointer;
@@ -64,8 +93,7 @@ header{
     #nav-bar{
         height: 100%;
         width: 100%;
-        background-color: @nav-bar-bc;
-        display: none;
+        background-color: @nav-bar;
 
         a{
             .nav-text;
@@ -77,5 +105,53 @@ header{
     }
 }
 
-/* Navigation Bar
+
+/****************************************************
+Banner
 *****************************************************/
+
+.parallax {
+
+    /* Set a specific height */
+    min-height: 40vh; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-1{/* Paralax containing small banner */
+    .parallax;
+    padding: 50vh 0 0 5vh;
+    min-height: 70vh; 
+}
+
+
+/****************************************************
+Banner
+*****************************************************/
+
+
+.main-banner{
+    padding: 2vh;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: @banner;
+}
+
+.div-banner{/* Divider banner for sections */
+    padding: 5vh;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: @banner;
+}
+
+.sub-banner{/* Smaller banner */
+    padding: 4vh 2vh;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: @banner;
+    width: 50%;
+}
