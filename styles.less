@@ -1,0 +1,81 @@
+/****************************************************
+Default reset
+*****************************************************/
+
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+    width: 100%;
+    text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+/****************************************************
+Variables
+*****************************************************/
+
+
+/* Defined Colours
+*****************************************************/
+
+@nav-bar-bc: #7b7b7b96;
+@nav-text-colour: #000000;
+
+/* Defined Fonts
+*****************************************************/
+
+.nav-text{
+    font-family: 'Noto Sans HK', sans-serif;
+    color: @nav-text-colour;
+    text-decoration: none;
+    float: left;
+    margin: 11px 3%;
+    font-size: 1em;
+}
+
+/****************************************************
+Header
+*****************************************************/
+
+header{
+    width: 100%;
+    height: 50px;
+
+    #nav-button{
+        border-radius: 20px;
+        padding: 6px 8px;
+        margin: 8px 1%;
+        float: right;
+        background-color: @nav-bar-bc;
+        border-style: none;
+        outline: none;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    #nav-bar{
+        height: 100%;
+        width: 100%;
+        background-color: @nav-bar-bc;
+        display: none;
+
+        a{
+            .nav-text;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* Navigation Bar
+*****************************************************/

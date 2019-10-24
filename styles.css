@@ -1,0 +1,66 @@
+/****************************************************
+Default reset
+*****************************************************/
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+/****************************************************
+Variables
+*****************************************************/
+/* Defined Colours
+*****************************************************/
+/* Defined Fonts
+*****************************************************/
+.nav-text {
+  font-family: 'Noto Sans HK', sans-serif;
+  color: #000000;
+  text-decoration: none;
+  float: left;
+  margin: 11px 3%;
+  font-size: 1em;
+}
+/****************************************************
+Header
+*****************************************************/
+header {
+  width: 100%;
+  height: 50px;
+}
+header #nav-button {
+  border-radius: 20px;
+  padding: 6px 8px;
+  margin: 8px 1%;
+  float: right;
+  background-color: #7b7b7b96;
+  border-style: none;
+  outline: none;
+}
+header #nav-button:hover {
+  cursor: pointer;
+}
+header #nav-bar {
+  height: 100%;
+  width: 100%;
+  background-color: #7b7b7b96;
+  display: none;
+}
+header #nav-bar a {
+  font-family: 'Noto Sans HK', sans-serif;
+  color: #000000;
+  text-decoration: none;
+  float: left;
+  margin: 11px 3%;
+  font-size: 1em;
+}
+header #nav-bar a:hover {
+  cursor: pointer;
+}
+/* Navigation Bar
+*****************************************************/
