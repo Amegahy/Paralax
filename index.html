@@ -19,7 +19,7 @@
         <button type="button" role="navigation-button" id="nav-button"><i class="fa">&#xf0c9;</i></button>
         <!--Navigation bar-->
         <div id="nav-bar" role="navigation-bar">
-            <a href="#" class="nav-text">Font Size: A a</a>
+            <a href="#" class="nav-text"  id="font">Font Size: A a</a>
             <a href="#" class="nav-text" id="contrast">Contrast:</a>
         </div>
     </header>
@@ -112,6 +112,15 @@
             /* Change paralax overlay */
             $('.parallax').css({'filter' : 'contrast(1)'});         
             $('.parallax-1').css({'filter' : 'contrast(1)'});
+        }
+    });
+    
+    /* Font Change */
+    $("#font").click(function(){
+        if($(this).css('font-size') == '1em'){//Font size has not been increased yet
+            ($(".nav-text").css({'font-size' : '1.2em'}));
+        }else {
+
         }
     });
     </script>
