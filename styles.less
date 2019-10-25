@@ -25,8 +25,8 @@ Variables
 *****************************************************/
 
 /* Nav bar colours */
-@nav-bar: #E0E0E0;
-@nav-bar-contrast: #000000;//Contrast version of nav bar background colour
+@nav-bar: #E0E0E0C4;
+@nav-bar-contrast: #000000C4;//Contrast version of nav bar background colour
 @nav-button: #7b7b7b96;
 @nav-button-contrast: #252525;//Contrast version of nav button background colour
 @nav-text-colour: #000000;
@@ -35,8 +35,10 @@ Variables
 /* Banner colours */
 @banner: #FFFFFF;
 @banner-text-colour: #000000;
-@banner-contrast: rgba(0, 0, 0, 0.534);
-@banner-text-contrast-colour: #FFFFFF;
+@text-box: #545454B8;
+@text-box-contrast: #FFFFFFA1;//Contrast version of text-box background
+@banner-contrast: rgba(0, 0, 0, 0.534);//Contrast version of banner background
+@banner-text-contrast-colour: #FFFFFF;//Contrast version of banner text colour
 
 /* Defined Fonts
 *****************************************************/
@@ -54,11 +56,12 @@ Variables
     font-family: 'Signika', sans-serif;
     height: 10vh;
     margin: 0;
-    font-size: 8vh;
+    font-size: 4em;
 }
 
 .body-text{
     font-family: 'Fira Sans', sans-serif;
+    font-size: 1em;
 }
 
 /****************************************************
@@ -66,9 +69,11 @@ Header
 *****************************************************/
 
 header{
+
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 8vh;
-    background-color: @nav-bar;
+
 
     #nav-button{
         border-radius: 20px;
@@ -80,9 +85,10 @@ header{
         outline: none;
         position: fixed;
         right: 0;
+        z-index: 1;;
 
         .fa{//Hamburger nav bar icon
-            font-size: 2vh;
+            font-size: 24px;
         }
 
         &:hover{
@@ -91,9 +97,10 @@ header{
     }
 
     #nav-bar{
-        height: 100%;
         width: 100%;
         background-color: @nav-bar;
+        height: 0;
+        opacity: 0;
 
         a{
             .nav-text;
@@ -148,10 +155,11 @@ Banner
     background-color: @banner;
 }
 
-.sub-banner{/* Smaller banner */
+.text-box{/* Smaller banner */
     padding: 4vh 2vh;
     box-sizing: border-box;
     margin: 0;
-    background-color: @banner;
+    background-color: @text-box;
+    color: @banner-text-contrast-colour;
     width: 50%;
 }

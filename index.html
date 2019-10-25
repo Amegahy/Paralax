@@ -10,11 +10,13 @@
         <!--Font Awesome link-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--Google Fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Noto+Sans|Signika&display=swap" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Noto+Sans|Signika&display=swap" rel="stylesheet">   
+        <!--jQuery Link-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     </head>
     <header aria-labelledby="navigation-section">
         <!--Navigation button-->
-        <button type="button" role="navigation-button" id="nav-button"><i style="font-size:24px" class="fa">&#xf0c9;</i></button>
+        <button type="button" role="navigation-button" id="nav-button"><i class="fa">&#xf0c9;</i></button>
         <!--Navigation bar-->
         <div id="nav-bar" role="navigation-bar">
             <a href="#">Font Size: A a</a>
@@ -36,12 +38,20 @@
         <!--End of Paralax Divider-->
         <!--Paralax Section-->
         <div class="parallax-1" role="paralax-full" style="background-image: url('https://media.istockphoto.com/photos/clothes-shop-interior-picture-id901863672?k=6&m=901863672&s=612x612&w=0&h=-_sWo8B6OJRaj4OuwblW8ytajBnBY_UMuaXGjr95wrE=');">
-            <div class="sub-banner" role="half-banner">
+            <div class="text-box" role="half-banner">
                 <h1 class="sub-heading">Lorem ipsem.</h1>
                 <p class="body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident autem vero commodi deleniti voluptatum, odit, numquam a dolorum illum aut eos hic reiciendis, similique porro tempore assumenda laborum possimus mollitia.</p>
             </div>
         </div>
         <!-- End of Paralax Section-->
     </body>
-
+    <script>
+    $("#nav-button").click(function(){
+        if($("#nav-bar").css('opacity') == '0'){//If the nav bar is hidden 
+            $("#nav-bar").animate({height: '8vh', opacity: '1'}, "slow");//Show nav bar
+        }else{
+            $("#nav-bar").animate({height: '0', opacity: '0'}, "slow");//Hide nav bar
+        }
+    });
+    </script>
 </html>
