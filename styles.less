@@ -26,19 +26,15 @@ Variables
 
 /* Nav bar colours */
 @nav-bar: #E0E0E0C4;
-@nav-bar-contrast: #000000C4;//Contrast version of nav bar background colour
 @nav-button: #7b7b7b96;
-@nav-button-contrast: #252525;//Contrast version of nav button background colour
 @nav-text-colour: #000000;
-@nav-text-contrast-colour: #FFFFFF;//Contrast version of nav bar text colour
 
 /* Banner colours */
 @banner: #FFFFFF;
 @banner-text-colour: #000000;
 @text-box: #545454B8;
-@text-box-contrast: #FFFFFFA1;//Contrast version of text-box background
-@banner-contrast: rgba(0, 0, 0, 0.534);//Contrast version of banner background
-@banner-text-contrast-colour: #FFFFFF;//Contrast version of banner text colour
+@text-box-text: #FFFFFF;
+
 
 /* Defined Fonts
 *****************************************************/
@@ -127,6 +123,7 @@ Banner
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter:contrast(50%);
 }
 
 .parallax-1{/* Paralax containing small banner */
@@ -140,26 +137,37 @@ Banner
 Banner
 *****************************************************/
 
-
-.main-banner{
-    padding: 2vh;
+.banner{
     box-sizing: border-box;
     margin: 0;
     background-color: @banner;
+    color: @banner-text-colour;
+    z-index: 1;
+}
+
+.main-banner{
+    .banner;
+    padding: 2vh;
 }
 
 .div-banner{/* Divider banner for sections */
+    .banner;
     padding: 5vh;
-    box-sizing: border-box;
-    margin: 0;
-    background-color: @banner;
 }
 
 .text-box{/* Smaller banner */
+    .banner;
+    z-index: 2;
     padding: 4vh 2vh;
-    box-sizing: border-box;
-    margin: 0;
-    background-color: @text-box;
-    color: @banner-text-contrast-colour;
     width: 50%;
+    margin-top: -70vh;
+    position: absolute;
+}
+
+.left{
+    left: 20px;
+}
+
+.right{
+    right: 20px;
 }

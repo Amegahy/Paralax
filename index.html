@@ -19,8 +19,8 @@
         <button type="button" role="navigation-button" id="nav-button"><i class="fa">&#xf0c9;</i></button>
         <!--Navigation bar-->
         <div id="nav-bar" role="navigation-bar">
-            <a href="#">Font Size: A a</a>
-            <a href="#">Contrast:</a>
+            <a href="#" class="nav-text">Font Size: A a</a>
+            <a href="#" class="nav-text" id="contrast">Contrast:</a>
         </div>
     </header>
     <body>
@@ -38,19 +38,70 @@
         <!--End of Paralax Divider-->
         <!--Paralax Section-->
         <div class="parallax-1" role="paralax-full" style="background-image: url('https://media.istockphoto.com/photos/clothes-shop-interior-picture-id901863672?k=6&m=901863672&s=612x612&w=0&h=-_sWo8B6OJRaj4OuwblW8ytajBnBY_UMuaXGjr95wrE=');">
-            <div class="text-box" role="half-banner">
-                <h1 class="sub-heading">Lorem ipsem.</h1>
-                <p class="body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident autem vero commodi deleniti voluptatum, odit, numquam a dolorum illum aut eos hic reiciendis, similique porro tempore assumenda laborum possimus mollitia.</p>
-            </div>
+        </div>
+        <!--Text box inside paralax-->
+        <div class="text-box left" role="left-half-banner">
+            <h1 class="sub-heading">Lorem ipsem.</h1>
+            <p class="body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident autem vero commodi deleniti voluptatum, odit, numquam a dolorum illum aut eos hic reiciendis, similique porro tempore assumenda laborum possimus mollitia.</p>
         </div>
         <!-- End of Paralax Section-->
+         <!--Paralax Divider-->
+        <div class="div-banner" role="divider-banner">
+            <h1 class="sub-heading">Lorem ipsem.</h1>
+        </div>
+        <!--End of Paralax Divider-->
+        <!--Paralax Section-->
+        <div class="parallax-1" role="paralax-full" style="background-image: url('https://media.istockphoto.com/photos/clothes-shop-interior-picture-id901863672?k=6&m=901863672&s=612x612&w=0&h=-_sWo8B6OJRaj4OuwblW8ytajBnBY_UMuaXGjr95wrE=');">
+        </div>
+        <!--Text box inside paralax-->
+        <div class="text-box right" role="right-half-banner">
+            <h1 class="sub-heading">Lorem ipsem.</h1>
+            <p class="body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident autem vero commodi deleniti voluptatum, odit, numquam a dolorum illum aut eos hic reiciendis, similique porro tempore assumenda laborum possimus mollitia.</p>
+        </div>
+         <!-- End of Paralax Section-->
     </body>
     <script>
+    /* Contrast mode values */
+    var navBarContrast = "#000000C4";//Contrast version of nav bar background colour
+    var navButtonContrast = "#FFFFFFe3";//Contrast version of nav button background colour
+    var navTextContrast = "#FFFFFF";//Contrast version of nav bar text colour
+    var textBoxContrast = "#FFFFFFA1";//Contrast version of text-box background
+    var bannerContrast = "#000000E8";//Contrast version of banner background
+    var bannerTextContrast = "#FFFFFF";//Contrast version of banner text colour
+
+    /* Non-contrast values */
+    var navBar = "#E0E0E0C4";//Nav bar background
+    var navButton = "#7B7B7B96";//Navigation button background
+    var navText = "#000000";//Nav bar link text colour 
+    var banner = "#FFFFFF";//Main banner background colour
+    var bannerText = "#000000";//Main banner text colour
+    var textBox = "#545454B8";//Text box background
+
+    /* Navigation Bar toggle */ 
     $("#nav-button").click(function(){
         if($("#nav-bar").css('opacity') == '0'){//If the nav bar is hidden 
             $("#nav-bar").animate({height: '8vh', opacity: '1'}, "slow");//Show nav bar
         }else{
             $("#nav-bar").animate({height: '0', opacity: '0'}, "slow");//Hide nav bar
+        }
+    });
+
+    /* Contrast change */
+    $("#contrast").click(function(){
+        if($(this).css('color') == 'rgb(0, 0, 0)'){//Contrast is off
+            $(".nav-text").css("color", navTextContrast);
+            $("#nav-button").css("background-color", navButtonContrast);
+            $("#nav-bar").css("background-color", navBarContrast);
+            $(".main-banner").css({"background-color": bannerContrast, "color": bannerTextContrast});
+            $(".div-banner").css({"background-color": bannerContrast, "color": bannerTextContrast});
+            $(".text-box").css({"background-color": bannerContrast, "color": bannerTextContrast});
+        }else{//Contrast is on
+            $(".nav-text").css("color", navText);
+            $("#nav-button").css("background-color", navButton);
+            $("#nav-bar").css("background-color", navBar);
+            $(".main-banner").css({"background-color": banner, "color": bannerText});
+            $(".div-banner").css({"background-color": banner, "color": bannerText});
+            $(".text-box").css({"background-color": banner, "color": bannerText});
         }
     });
     </script>
