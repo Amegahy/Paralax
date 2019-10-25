@@ -89,19 +89,29 @@
     /* Contrast change */
     $("#contrast").click(function(){
         if($(this).css('color') == 'rgb(0, 0, 0)'){//Contrast is off
+            /* Change text colours */
             $(".nav-text").css("color", navTextContrast);
+            /* Change background colours */
             $("#nav-button").css("background-color", navButtonContrast);
             $("#nav-bar").css("background-color", navBarContrast);
             $(".main-banner").css({"background-color": bannerContrast, "color": bannerTextContrast});
             $(".div-banner").css({"background-color": bannerContrast, "color": bannerTextContrast});
             $(".text-box").css({"background-color": bannerContrast, "color": bannerTextContrast});
+            /* Change paralax overlay */
+            $('.parallax').css({'filter' : 'contrast(0.5)'});         
+            $('.parallax-1').css({'filter' : 'contrast(0.5)'});         
         }else{//Contrast is on
+            /* Change text colours */
             $(".nav-text").css("color", navText);
+            /* Change background colours */
             $("#nav-button").css("background-color", navButton);
             $("#nav-bar").css("background-color", navBar);
             $(".main-banner").css({"background-color": banner, "color": bannerText});
             $(".div-banner").css({"background-color": banner, "color": bannerText});
             $(".text-box").css({"background-color": banner, "color": bannerText});
+            /* Change paralax overlay */
+            $('.parallax').css({'filter' : 'contrast(1)'});         
+            $('.parallax-1').css({'filter' : 'contrast(1)'});
         }
     });
     </script>

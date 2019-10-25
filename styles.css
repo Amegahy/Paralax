@@ -45,6 +45,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 3;
 }
 header #nav-button {
   border-radius: 20px;
@@ -85,7 +86,8 @@ Banner
 *****************************************************/
 .parallax {
   /* Set a specific height */
-  min-height: 40vh;
+  min-height: 50vh;
+  z-index: 0;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -95,7 +97,8 @@ Banner
 .parallax-1 {
   /* Paralax containing small banner */
   /* Set a specific height */
-  min-height: 40vh;
+  min-height: 50vh;
+  z-index: 0;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
