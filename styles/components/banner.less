@@ -1,0 +1,71 @@
+/* DOCUMENT INFORMATION
+    - Document: Banner styling
+    - Author: Alex Megahy
+    - Description: All banner stylings
+------------------------------------------- */
+
+/* Banner to inherit from */
+.banner{
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 1;
+
+    /* Defined Fonts */
+    .sub-heading {
+        font-family: 'Signika', sans-serif;
+        font-size: 2em;
+        margin: 0;
+    }
+    .body-text {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 1em;
+    }
+}
+
+/* Main banner */
+.banner-main{
+    .banner;
+    background-color: @main-banner;
+    color: @main-banner-text-colour;
+    padding: 2vh;
+}
+
+/* Divider banner for sections */
+.banner-div{
+    .banner;
+    background-color: @div-banner;
+    color: @div-banner-text-colour;
+    padding: 5vh;
+}
+
+/* Smaller banner */
+.banner-small{
+    .banner;
+    background-color: @small-banner;
+    color: @small-banner-text-colour;
+    padding: 4vh 2vh;    
+    width: 70%;
+    z-index: 2;
+}
+
+/* Alignment of small text box inside banner */
+.left{
+    left: 20px;
+    position: absolute;
+}
+
+.right{
+    right: 20px;
+    position: absolute;
+}
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+    .sub-heading {
+        font-size: 4em;
+    }
+    .banner-small{
+        .banner;
+        width: 50%;
+    }
+}
