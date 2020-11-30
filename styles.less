@@ -24,11 +24,6 @@ Variables
 /* Defined Colours
 *****************************************************/
 
-/* Nav bar colours */
-@nav-bar: #E0E0E0C4;
-@nav-button: #7b7b7b96;
-@nav-text-colour: #000000;
-
 /* Banner colours */
 @banner: #FFFFFF;
 @banner-text-colour: #000000;
@@ -38,15 +33,6 @@ Variables
 
 /* Defined Fonts
 *****************************************************/
-
-.nav-text{
-    font-family: 'Noto Sans HK', sans-serif;
-    color: @nav-text-colour;
-    text-decoration: none;
-    float: left;
-    margin: 23px 3%;
-    font-size: 1em;
-}
 
 .sub-heading{
     font-family: 'Signika', sans-serif;
@@ -58,54 +44,6 @@ Variables
 .body-text{
     font-family: 'Fira Sans', sans-serif;
     font-size: 1em;
-}
-
-/****************************************************
-Header
-*****************************************************/
-
-header{
-
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 3;
-
-    #nav-button{
-        border-radius: 20px;
-        padding: 1.3vh 1.5vh;
-        margin: 1vh;
-        float: right;
-        background-color: @nav-button;
-        border-style: none;
-        outline: none;
-        position: fixed;
-        right: 0;
-
-
-        .fa{//Hamburger nav bar icon
-            font-size: 24px;
-        }
-
-        &:hover{
-            cursor: pointer;
-        }
-    }
-
-    #nav-bar{
-        width: 100%;
-        background-color: @nav-bar;
-        height: 0;
-        opacity: 0;
-
-        a{
-            .nav-text;
-
-            &:hover{
-                cursor: pointer;
-            }
-        }
-    }
 }
 
 

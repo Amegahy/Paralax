@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Photo Grid</title>
+        <title>Paralax</title>
         <!--IE 11 Compatible Statment-->
         <meta http-equiv=Content-Type content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,15 +14,6 @@
         <!--jQuery Link-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     </head>
-    <header aria-labelledby="navigation-section">
-        <!--Navigation button-->
-        <button type="button" role="navigation-button" id="nav-button"><i class="fa">&#xf0c9;</i></button>
-        <!--Navigation bar-->
-        <div id="nav-bar" role="navigation-bar">
-            <a href="#" class="nav-text"  id="font">Font Size: A a</a>
-            <a href="#" class="nav-text" id="contrast">Contrast:</a>
-        </div>
-    </header>
     <body>
         <!--Paralax Section-->
         <div class="parallax" role="paralax-top" style="background-image: url('https://c.pxhere.com/photos/3e/75/clothes_hangers_rack-929910.jpg!d');"></div>
@@ -60,68 +51,4 @@
         </div>
          <!-- End of Paralax Section-->
     </body>
-    <script>
-    /* Contrast mode values */
-    var navBarContrast = "#000000C4";//Contrast version of nav bar background colour
-    var navButtonContrast = "#FFFFFFe3";//Contrast version of nav button background colour
-    var navTextContrast = "#FFFFFF";//Contrast version of nav bar text colour
-    var textBoxContrast = "#FFFFFFA1";//Contrast version of text-box background
-    var bannerContrast = "#000000E8";//Contrast version of banner background
-    var bannerTextContrast = "#FFFFFF";//Contrast version of banner text colour
-
-    /* Non-contrast values */
-    var navBar = "#E0E0E0C4";//Nav bar background
-    var navButton = "#7B7B7B96";//Navigation button background
-    var navText = "#000000";//Nav bar link text colour 
-    var banner = "#FFFFFF";//Main banner background colour
-    var bannerText = "#000000";//Main banner text colour
-    var textBox = "#545454B8";//Text box background
-
-    /* Navigation Bar toggle */ 
-    $("#nav-button").click(function(){
-        if($("#nav-bar").css('opacity') == '0'){//If the nav bar is hidden 
-            $("#nav-bar").animate({height: '8vh', opacity: '1'}, "slow");//Show nav bar
-        }else{
-            $("#nav-bar").animate({height: '0', opacity: '0'}, "slow");//Hide nav bar
-        }
-    });
-
-    /* Contrast change */
-    $("#contrast").click(function(){
-        if($(this).css('color') == 'rgb(0, 0, 0)'){//Contrast is off
-            /* Change text colours */
-            $(".nav-text").css("color", navTextContrast);
-            /* Change background colours */
-            $("#nav-button").css("background-color", navButtonContrast);
-            $("#nav-bar").css("background-color", navBarContrast);
-            $(".main-banner").css({"background-color": bannerContrast, "color": bannerTextContrast});
-            $(".div-banner").css({"background-color": bannerContrast, "color": bannerTextContrast});
-            $(".text-box").css({"background-color": bannerContrast, "color": bannerTextContrast});
-            /* Change paralax overlay */
-            $('.parallax').css({'filter' : 'contrast(0.5)'});         
-            $('.parallax-1').css({'filter' : 'contrast(0.5)'});         
-        }else{//Contrast is on
-            /* Change text colours */
-            $(".nav-text").css("color", navText);
-            /* Change background colours */
-            $("#nav-button").css("background-color", navButton);
-            $("#nav-bar").css("background-color", navBar);
-            $(".main-banner").css({"background-color": banner, "color": bannerText});
-            $(".div-banner").css({"background-color": banner, "color": bannerText});
-            $(".text-box").css({"background-color": banner, "color": bannerText});
-            /* Change paralax overlay */
-            $('.parallax').css({'filter' : 'contrast(1)'});         
-            $('.parallax-1').css({'filter' : 'contrast(1)'});
-        }
-    });
-    
-    /* Font Change */
-    $("#font").click(function(){
-        if($(this).css('font-size') == '1em'){//Font size has not been increased yet
-            ($(".nav-text").css({'font-size' : '1.2em'}));
-        }else {
-
-        }
-    });
-    </script>
 </html>
