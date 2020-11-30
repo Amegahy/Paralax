@@ -1,0 +1,173 @@
+/* DOCUMENT INFORMATION
+    - Document: index.html stylings
+    - Author: Alex Megahy
+    - Description: All imported index.html stylings
+------------------------------------------- */
+/********** Globals **********/
+/* DOCUMENT INFORMATION
+    - Document: Global stylings
+    - Author: Alex Megahy
+    - Description: All imported global stylings
+------------------------------------------- */
+/* all impors from global folder */
+/* DOCUMENT INFORMATION
+    - Document: Structure classes
+    - Author: Alex Megahy
+    - Description: All structure classes used site wide
+------------------------------------------- */
+/* Default reset */
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+/* DOCUMENT INFORMATION
+    - Document: Variables
+    - Author: Alex Megahy
+    - Description: All variables used sitewide
+------------------------------------------- */
+/* Base colours */
+/* Banner colours */
+/********** Components **********/
+/* DOCUMENT INFORMATION
+    - Document: Banner styling
+    - Author: Alex Megahy
+    - Description: All banner stylings
+------------------------------------------- */
+/* Banner to inherit from */
+.banner {
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 1;
+  /* Defined Fonts */
+}
+.banner .sub-heading {
+  font-family: 'Signika', sans-serif;
+  font-size: 2em;
+  margin: 0;
+}
+.banner .body-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1em;
+}
+/* Main banner */
+.banner-main {
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 1;
+  /* Defined Fonts */
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 2vh;
+}
+.banner-main .sub-heading {
+  font-family: 'Signika', sans-serif;
+  font-size: 2em;
+  margin: 0;
+}
+.banner-main .body-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1em;
+}
+/* Divider banner for sections */
+.banner-div {
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 1;
+  /* Defined Fonts */
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 5vh;
+}
+.banner-div .sub-heading {
+  font-family: 'Signika', sans-serif;
+  font-size: 2em;
+  margin: 0;
+}
+.banner-div .body-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1em;
+}
+/* Smaller banner */
+.banner-small {
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 1;
+  /* Defined Fonts */
+  background-color: #545454B8;
+  color: #FFFFFF;
+  padding: 4vh 2vh;
+  width: 70%;
+  z-index: 2;
+}
+.banner-small .sub-heading {
+  font-family: 'Signika', sans-serif;
+  font-size: 2em;
+  margin: 0;
+}
+.banner-small .body-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1em;
+}
+/* Alignment of small text box inside banner */
+.left {
+  left: 20px;
+  position: absolute;
+}
+.right {
+  right: 20px;
+  position: absolute;
+}
+/* Media queries */
+@media only screen and (min-width: 768px) {
+  .sub-heading {
+    font-size: 4em;
+  }
+  .banner-small {
+    box-sizing: border-box;
+    margin: 0;
+    z-index: 1;
+    /* Defined Fonts */
+    width: 50%;
+  }
+  .banner-small .sub-heading {
+    font-family: 'Signika', sans-serif;
+    font-size: 2em;
+    margin: 0;
+  }
+  .banner-small .body-text {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1em;
+  }
+}
+/* DOCUMENT INFORMATION
+    - Document: Paralax styling
+    - Author: Alex Megahy
+    - Description: All paralax image stylings
+------------------------------------------- */
+/* Paralax image */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  z-index: 0;
+}
+/* Paralax containing small banner */
+.parallax-1 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  z-index: 0;
+  align-items: center;
+  display: flex;
+  padding: 1em;
+}
